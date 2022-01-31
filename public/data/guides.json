@@ -1,0 +1,62 @@
+{
+	"Bob": {
+		"age": "26",
+		"role": "Guide",
+		"description":"Loves travelling"	
+	},
+	"Marie": {
+		"age": "38",
+		"role": "Guide",
+		"description":"Loves travelling"	
+	},
+	"Victoria": {
+		"age": "38",
+		"role": "Guide",
+		"description":"Loves travelling"	
+	},
+	"Vancouver": {
+		"age": "38",
+		"role": "Guide",
+		"description":"Loves travelling"	
+	},
+	"Westminster": {
+		"age": "38",
+		"role": "Guide",
+		"description":"Loves travelling"	
+	},
+	"Royal Oak": {
+		"age": "38",
+		"role": "Guide",
+		"description":"Loves travelling"	
+	},
+	"Burnaby": {
+		"age": "38",
+		"role": "Guide",
+		"description":"Loves travelling"	
+	},
+	"Richmond": {
+		"age": "38",
+		"role": "Guide",
+		"description":"Loves travelling"	
+	},
+	"Whistler": {
+		"age": "38",
+		"role": "Guide",
+		"description":"Loves travelling"	
+	},
+	"Main": {
+		"age": "38",
+		"role": "Guide",
+		"description":"Loves travelling"	
+	},
+	"Burrard": {
+		"age": "38",
+		"role": "Guide",
+		"description":"Loves travelling"	
+	},
+	"Waterfront": {
+		"age": "26",
+		"role": "Guide",
+		"description": "Loves reading"	
+	}
+}

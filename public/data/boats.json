@@ -1,0 +1,23 @@
+{
+	"Taiana": {
+		"type": "motor boat",
+		"age": "10 years old",
+		"manufacturer": "Yamaha",
+		"maintenance record": {
+			"october 2019": {
+				"issue": "Engine problem",
+				"symptoms": "Motor not starting properly",
+				"resolved": true,
+				"process":"Replaced the engine",
+				"notes": "3 years warranty. Next service in 3 years"	
+			}
+		}	
+	},
+	"Fish and Chips": {},	
+	"Stinky Anchovy": {},	
+	"Holy Ship": {},	
+	"In Deep Ship": {},	
+	"Clam Dunk": {},	
+	"Ketch-up": {},	
+	"Nacho Boat": {}	
+}
