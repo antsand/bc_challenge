@@ -3,7 +3,10 @@ declare(strict_types=1);
 
 class GuideController extends ControllerBase
 {
-
+    /* This action would allow the operator
+     * to add a new guide to the system. The full
+     * functionality is not implemented.
+     */	
     public function createAction()
     {
         $response = new \Phalcon\Http\Response();
@@ -13,6 +16,10 @@ class GuideController extends ControllerBase
 	$this->view->disable();
     }
     
+    /* This controller action would allow users to update guide information..
+     * Things like the guides, Age, interest, years of service, experience,
+     * Resume, etc.  
+     */
     public function updateAction()
     {
  	    $this->view->disable();
@@ -20,33 +27,36 @@ class GuideController extends ControllerBase
 	    $response = new \Phalcon\Http\Response();
 	    $response->setContent(json_encode('Error'));
 	    if ($request->isPost() && $request->isAjax()) {
-		$boat_num = $request->getPost('boat_num');
-		$status_update = $request->getPost('status_update');
-		$data_read = file_get_contents(__DIR__ . '/../../public/data/data.json');
-		$data_read = json_decode($data_read);
-		$data_read->boats[$boat_num]->status = $status_update;
-		file_put_contents(__DIR__ . '/../../public/data/data.json', json_encode($data_read));
-		$response = new \Phalcon\Http\Response();
-		$response->_isJsonResponse = true;
-		$response->setContentType('application/json', 'UTF-8');
-		$response->setContent(json_encode($data_read));
 	    }
 	    return $response;
     }
 
+    /* This action would deletre a guide. 
+     * If the guide left the company or was fired
+     * FishFry might want to remove this guide from
+     * their system. 
+     */
     public function deleteAction()
     {
 
     }
 
+    /* This function reads all the guides 
+     * that are active at FishFry
+     */
     public function readAction()
     {
 	$this->view->disable();
-	$data_read = file_get_contents(__DIR__ . '/../../public/data/guides.json');
         $response = new \Phalcon\Http\Response();
         $response->_isJsonResponse = true;
         $response->setContentType('application/json', 'UTF-8');
-	$response->setContent($data_read);
+	$guides = new Guide();
+	$data_read = $guides->getdata();
+	if (!$data_read) {
+		$response->setContent(json_encode("Error reading file"));
+		return $response;
+	}
+	$response->setContent(json_encode($data_read));
 	return $response;
     }
 }

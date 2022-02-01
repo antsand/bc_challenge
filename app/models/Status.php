@@ -13,15 +13,17 @@ class Status extends Phalcon\Mvc\Model
 	}
 
 	public function putdata($data, $json_true = FALSE) {
-		print_r($data);
 		if (!$json_true) {
 			$data = json_encode($data);
 		}
-		return file_put_contents(__DIR__ . '/../../public/data/data.json', $data);
+		return file_put_contents($this::STATUS_PATH, $data);
 	}
 
 	public function adddata($data, $boat_selected, $guide_selected) {
 		$boat_add = new StdClass();
+		/* By default, the status will be under
+		 * 'Docked'
+		 */ 
 		$boat_add->status = 'docked';
 		$boat_add->name = $boat_selected;
 		$boat_add->guide = $guide_selected;
