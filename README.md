@@ -7,7 +7,11 @@
 - Vue.js as the frontend framework
 
 ### How does it work?
-#### Backend Structure:
+####Backend Logic:
+The framework uses a Model View Controller  MVC architecture. The Models store the business logic and interact with the database, the controller handles the link and what to show for each link and the view renders the HTML page. 
+
+An MVC structure helps in modularizing the code into different logic components. By making the code modular, it allows for easy maintainability. 
+##### Backend Structure:
  The core logic of the backend is under the app folder. The folder structure is as follows:
  ```
 	-> public
