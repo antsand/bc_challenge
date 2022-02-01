@@ -72,7 +72,7 @@ The sass code is placed under
 				main.scss
 ```
 - Each of the scss file names correspond to the Vue components. 
-- main.scss imports sass plugins and complies all the scss files into one. 
+- main.scss imports sass plugins and imports all the scss files. 
 - To compile the file, we need to run sass.php which will compile the \*.scss files into css.
 - The css file is generated and saved in public/css/main.css
 				
