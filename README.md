@@ -8,6 +8,7 @@
 - SASS for styling logic and compiling to CSS  
 - JSON to store API data 
 - NGINX Server
+- Bootstrap for CSS library
 
 ### How does it work?
 #### Backend Logic:
@@ -56,4 +57,5 @@ The cache folder stores the PHP files. The template engine used is Volt. To conv
 
 Though the backend takes care of all the logic and HTTP links, the frontend is rendered using Vue. 
 
+The below image shows how Vue is rendered and how the frontend works.
 ![Workflow of the frontend](https://raw.githubusercontent.com/antsand/bc_challenge/master/public/img/bc_challenge_workflow.jpg)
