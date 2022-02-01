@@ -1,9 +1,10 @@
 # bc_challenge
 
 ## This repository uses:
-Phalcon PHP as the backend framework
-Phalcon Php is a C compiled framework mounted as a plugin to PHP. 
-Vue.js as the frontend framework
+
+- Phalcon PHP as the backend framework
+	> **_NOTE:_**  Phalcon Php is a C compiled framework mounted as a plugin to PHP. 
+- Vue.js as the frontend framework
 
 ### How does it work?
 #### Backend Structure:
