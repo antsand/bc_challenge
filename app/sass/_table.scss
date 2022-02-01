@@ -1,0 +1,31 @@
+.boat {
+	.table {
+		text-align:center;
+		td {
+			vertical-align:middle;
+		}
+	}
+	.icon {
+		width:25px;
+		height:25px;
+		object-fit: cover;
+		display: block;
+		background-repeat: no-repeat;
+		position:relative;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	.check {
+		background-image: url('https://www.antsand.ca/uploads/02d0edcfc1bd97173e2cafe04d026c4e/cf9f749cd936116f8b15ad8d1dbd79a2.svg');
+	}
+	.cross {
+		background-image: url('https://www.antsand.ca/uploads/02d0edcfc1bd97173e2cafe04d026c4e/f71a0b94bb622a207d2d5aaa4d369c79.svg');
+	}
+	
+	.pad15 {
+		margin:15px 0px;
+	}
+	.align-left {
+		text-align:left;
+	}
+}

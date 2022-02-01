@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d73ccb859ee4a981e231"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "22f880f6c9016da79f31"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -13200,7 +13200,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, "\n.table {\n  text-align: center;\n}\n.table td {\n    vertical-align: middle;\n}\n.icon {\n  width: 25px;\n  height: 25px;\n  object-fit: cover;\n  display: block;\n  background-repeat: no-repeat;\n  position: relative;\n  margin-left: auto;\n  margin-right: auto;\n}\n.check {\n  background-image: url(\"https://www.antsand.ca/uploads/02d0edcfc1bd97173e2cafe04d026c4e/cf9f749cd936116f8b15ad8d1dbd79a2.svg\");\n}\n.cross {\n  background-image: url(\"https://www.antsand.ca/uploads/02d0edcfc1bd97173e2cafe04d026c4e/f71a0b94bb622a207d2d5aaa4d369c79.svg\");\n}\n.pad15 {\n  margin: 15px 0px;\n}\n.align-left {\n  text-align: left;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -13214,7 +13214,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, "\n.add_boat {\n  margin-bottom: 25px;\n}\n.display-block {\n  display: block;\n}\n.display-none {\n  display: none;\n}\n.modal {\n  display: block;\n  opacity: 1;\n}\n.modal .fade .modal-dialog {\n    transform: translate(-50%, 0);\n}\n.modal .fade:not(.show) {\n    opacity: 1;\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 

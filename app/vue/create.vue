@@ -112,26 +112,5 @@
 	} 
 </script>
 <style lang="scss">
-	.add_boat {
-		margin-bottom:25px;
-	}
- 	.display-block {
-		display:block;
-	}
-	.display-none {
-		display:none;
-	}
-	.modal {
-		display:block;
-		opacity:1;
-		.fade{
-		.modal-dialog {
-			transform:translate(-50%, 0);
-		}
-		}
-		.fade:not(.show) {
-			opacity:1;
-		}
-	}	
 
 </style>
