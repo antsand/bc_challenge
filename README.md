@@ -63,13 +63,16 @@ The below image shows how Vue is rendered and how the frontend works.
 
 #### Sass:
 The sass code is placed under
+```
 		->sass.php
 		-> app
 			-> Sass
 				_create.scss
 				_table.scss
 				main.scss
-
-Each of the scss file names correspond to the Vue components. main.scss imports sass plugins and complies all the scss files into one. To compile the file, we need to run sass.php which will compile the \*.scss files into css.
-The css file is generated and saved in public/css/main.css
+```
+- Each of the scss file names correspond to the Vue components. 
+- main.scss imports sass plugins and complies all the scss files into one. 
+- To compile the file, we need to run sass.php which will compile the \*.scss files into css.
+- The css file is generated and saved in public/css/main.css
 				
