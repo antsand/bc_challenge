@@ -24,6 +24,7 @@ An MVC structure helps in modularizing the code into different logic components.
 			-> Views
 			-> Models
 			-> Vue (frontend framework soruce file)
+			-> sass
 ```
 The controller name and actions correspond to the HTTP link.
 E.g. if you want to read the API data directly:
@@ -49,13 +50,26 @@ The cache folder stores the PHP files. The template engine used is Volt. To conv
 	The core Vue files are stored under:
 	
 		-> app
-		-> Vue
-			boats.js
-			dashboard.vue
-			create.vue
-			table.vue
+			-> Vue
+				boats.js
+				dashboard.vue
+				create.vue
+				table.vue
 
 Though the backend takes care of all the logic and HTTP links, the frontend is rendered using Vue. 
 
 The below image shows how Vue is rendered and how the frontend works.
 ![Workflow of the frontend](https://raw.githubusercontent.com/antsand/bc_challenge/master/public/img/bc_challenge_workflow.jpg)
+
+#### Sass:
+The sass code is placed under
+		->sass.php
+		-> app
+			-> Sass
+				_create.scss
+				_table.scss
+				main.scss
+
+Each of the scss file names correspond to the Vue components. main.scss imports sass plugins and complies all the scss files into one. To compile the file, we need to run sass.php which will compile the \*.scss files into css.
+The css file is generated and saved in public/css/main.css
+				
