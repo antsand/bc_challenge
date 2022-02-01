@@ -55,3 +55,5 @@ The cache folder stores the PHP files. The template engine used is Volt. To conv
 			table.vue
 
 Though the backend takes care of all the logic and HTTP links, the frontend is rendered using Vue. 
+
+![Workflow of the frontend](https://raw.githubusercontent.com/antsand/bc_challenge/master/public/img/bc_challenge_workflow.jpg)
