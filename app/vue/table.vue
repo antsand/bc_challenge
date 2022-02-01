@@ -1,5 +1,30 @@
 <template>
 	<div>
+		<div class="sm-view">
+				<div v-for="boats, key in data_local.boats" v-if="boats" class="boat_card">
+					<div scope="row" class="index"> {{ key + 1 }}</div>
+					<div class="align-left"> 
+						<p>Boat Name: <b>{{ boats.name }}</b></p>
+						<p>Guide Incharge: <b>{{ boats.guide }} </b></p>
+						<div>
+							<div>
+								Status:
+								<select v-model="boats.status" @change="update_status(key, boats.status)">
+									<option value="docked">Docked</option>
+									<option value ="inbound">Inbound</option>
+									<option value="outbound">Outbound</option>
+									<option value="maintenance">Maintenance</option>
+								</select>
+							</div>
+							<div class="btn btn-danger pad15" @click="delete_status(key)">
+								Delete	
+							</div>
+						</div>	
+
+					</div>
+				</div>
+			
+		</div>
 		<table class="table">
 			<thead>
 			<tr>
@@ -27,7 +52,7 @@
 				<tr v-for="boats, key in data_local.boats" v-if="boats">
 					<th scope="row"> {{ key + 1 }}</th>
 					<td class="align-left"> 
-						<p>Boat Name:<b>{{ boats.name }}</b></p>
+						<p>Boat Name: <b>{{ boats.name }}</b></p>
 						<p>Guide Incharge: <b>{{ boats.guide }} </b></p>
 						<div>
 							<div>

@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "22f880f6c9016da79f31"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7125992b8d170a670832"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -13200,7 +13200,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -13777,6 +13777,31 @@ function applyToTag (styleElement, obj) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -15960,6 +15985,106 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
+    _c(
+      "div",
+      { staticClass: "sm-view" },
+      _vm._l(_vm.data_local.boats, function(boats, key) {
+        return boats
+          ? _c("div", { staticClass: "boat_card" }, [
+              _c("div", { staticClass: "index", attrs: { scope: "row" } }, [
+                _vm._v(" " + _vm._s(key + 1))
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "align-left" }, [
+                _c("p", [
+                  _vm._v("Boat Name: "),
+                  _c("b", [_vm._v(_vm._s(boats.name))])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("Guide Incharge: "),
+                  _c("b", [_vm._v(_vm._s(boats.guide) + " ")])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("div", [
+                    _vm._v("\n\t\t\t\t\t\t\tStatus:\n\t\t\t\t\t\t\t"),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: boats.status,
+                            expression: "boats.status"
+                          }
+                        ],
+                        on: {
+                          change: [
+                            function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                boats,
+                                "status",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            },
+                            function($event) {
+                              return _vm.update_status(key, boats.status)
+                            }
+                          ]
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "docked" } }, [
+                          _vm._v("Docked")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "inbound" } }, [
+                          _vm._v("Inbound")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "outbound" } }, [
+                          _vm._v("Outbound")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "maintenance" } }, [
+                          _vm._v("Maintenance")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "btn btn-danger pad15",
+                      on: {
+                        click: function($event) {
+                          return _vm.delete_status(key)
+                        }
+                      }
+                    },
+                    [_vm._v("\n\t\t\t\t\t\t\tDelete\t\n\t\t\t\t\t\t")]
+                  )
+                ])
+              ])
+            ])
+          : _vm._e()
+      }),
+      0
+    ),
+    _vm._v(" "),
     _c("table", { staticClass: "table" }, [
       _vm._m(0),
       _vm._v(" "),
@@ -15975,7 +16100,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("td", { staticClass: "align-left" }, [
                       _c("p", [
-                        _vm._v("Boat Name:"),
+                        _vm._v("Boat Name: "),
                         _c("b", [_vm._v(_vm._s(boats.name))])
                       ]),
                       _vm._v(" "),

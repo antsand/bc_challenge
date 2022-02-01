@@ -1,9 +1,39 @@
+$tablet: 500px;
 .boat {
-	.table {
-		text-align:center;
-		td {
-			vertical-align:middle;
+	@include breakpoint($tablet) {
+		.table {
+			text-align:center;
+			td {
+				vertical-align:middle;
+			}
 		}
+		.sm-view {
+			display:none;
+		}
+	}
+	@include breakpoint(0 $tablet) {
+		.table {
+			display:none;
+		}
+		.sm-view {
+			display:block;
+			.boat_card {
+				border: 1px solid rgba(25,25,25,0.2);
+				border-radius: 4%;
+				padding: 15px;
+				margin-bottom: 25px;
+				.index {
+					background: rgb(25, 25, 25);
+					color: white;
+					padding: 5px;
+					border-top-left-radius: 4%;
+					border-top-right-radius: 4%;
+					text-align: center;
+					margin-bottom:10px;
+				}
+			
+			}
+		}	
 	}
 	.icon {
 		width:25px;
