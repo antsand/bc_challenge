@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="sm-view">
+		<div class="sm-view" v-if="data_local">
 				<div v-for="boats, key in data_local.boats" v-if="boats" class="boat_card">
 					<div scope="row" class="index"> {{ key + 1 }}</div>
 					<div class="align-left"> 
