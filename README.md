@@ -92,20 +92,36 @@ The sass code is placed under
 - The css file is generated and saved in public/css/main.css
 				
 				
-## Unit Testing:
-Currently we do end to end testing using cypress
-To install cypress - npm install cypress --save-dev 
-The test script is located at: fishfry_spec.js in the root folder. Once cypress is installed fishfry_spec.js needs to be copied over to the cyress testing folder.
-This step can be implemented using CI/CD scripts.
+## Testing:
+- Currently we do end to end testing using cypress
+- To install cypress - npm install cypress --save-dev 
+- The test script is located at: fishfry_spec.js in the root folder. Once cypress is installed fishfry_spec.js needs to be copied over to the cyress testing folder.
+- This step can be implemented using CI/CD scripts.
 	
 In integration testing we test 6 cases:
-Test 1 tries to delete all records and starts from a clean slate.
-Test 2 clikcs on Add a boat and a guide, and see if it is added to the record
-Test 3 tries to add duplicate boat and check for an error
-Test 4 tries to add a duplicate guide and check for an error
-Test 5 changes the status from docked to maintenance, refreshes the page and sees if they status has been updated.
-Test 6 Opens the 'Add a boat' dialog and closes it to see if the popup functionality works. 
+
+The objective for an end-to-end integration is to test if the whole system works as described. We want to check if the elements on the website work well. Integr44ation testing will also check if the server is responding correctly. By doing integration testing, we technically test every component and active feature of the application. 
+
+Both the API, PHP code, and Vue are tested. 
+
+- Test 1 tries to delete all records and starts from a clean slate.
+- Test 2 clikcs on Add a boat and a guide, and see if it is added to the record
+- Test 3 tries to add duplicate boat and check for an error
+- Test 4 tries to add a duplicate guide and check for an error
+- Test 5 changes the status from docked to maintenance, refreshes the page and sees if they status has been updated.
+- Test 6 Opens the 'Add a boat' dialog and closes it to see if the popup functionality works. 
+
 ![End to end integration testing](https://raw.githubusercontent.com/antsand/bc_challenge/master/public/img/test_logs.jpg)
 
+Things to be done in testing:
+Beyond integration testing, in the future it is important to add unit test for both the backend server and frontend Vue code.
 
+For the backend php code, test if:
+- CRUD - Create, read, update and delete works for the status controller.
+- Check if the api files exist, and if they do not, what should be done and how the error is handled
+
+For the frontend Vue code, test if:
+- The component logic works as expected. Is it able to render the dom element.
+- Check if it is able to retrive data from the server using ajax. If not, how is the error handled.
+- Check if each method works the way it is supposed to. If it needs to manipulate a dom element, check if the elemnt is manipulated after the function is executed. 
 
