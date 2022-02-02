@@ -49,7 +49,7 @@
 			</tr>	
 			</thead>
 			<tbody v-if="data_local">
-				<tr v-for="boats, key in data_local.boats" v-if="boats">
+				<tr v-for="boats, key in data_local.boats" class="boats_active_list" v-if="boats">
 					<th scope="row"> {{ key + 1 }}</th>
 					<td class="align-left"> 
 						<p>Boat Name: <b>{{ boats.name }}</b></p>
@@ -64,7 +64,7 @@
 									<option value="maintenance">Maintenance</option>
 								</select>
 							</div>
-							<div class="btn btn-danger pad15" @click="delete_status(key)">
+							<div class="btn btn-danger pad15 delete" @click="delete_status(key)">
 								Delete	
 							</div>
 						</div>	

@@ -33,8 +33,8 @@
 			</form>
 		      </div>
 		      <div class="modal-footer">
-			<button type="button" class="btn btn-secondary" data-dismiss="modal" @click="close_form">Close</button>
-			<button type="button" class="btn btn-primary" @click="add_boat">Add</button>
+			<button type="button" class="btn btn-secondary close_table_popup" data-dismiss="modal" @click="close_form">Close</button>
+			<button type="button" class="btn btn-primary add_to_table" @click="add_boat">Add</button>
 		      </div>
 		    </div>
 		  </div>

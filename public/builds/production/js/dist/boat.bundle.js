@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f5bebfc408f8d8ef1a88"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f13c3aca62122a834917"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -16102,7 +16102,7 @@ var render = function() {
             "tbody",
             _vm._l(_vm.data_local.boats, function(boats, key) {
               return boats
-                ? _c("tr", [
+                ? _c("tr", { staticClass: "boats_active_list" }, [
                     _c("th", { attrs: { scope: "row" } }, [
                       _vm._v(" " + _vm._s(key + 1))
                     ]),
@@ -16183,7 +16183,7 @@ var render = function() {
                         _c(
                           "div",
                           {
-                            staticClass: "btn btn-danger pad15",
+                            staticClass: "btn btn-danger pad15 delete",
                             on: {
                               click: function($event) {
                                 return _vm.delete_status(key)
@@ -16538,7 +16538,7 @@ var render = function() {
                     _c(
                       "button",
                       {
-                        staticClass: "btn btn-secondary",
+                        staticClass: "btn btn-secondary close_table_popup",
                         attrs: { type: "button", "data-dismiss": "modal" },
                         on: { click: _vm.close_form }
                       },
@@ -16548,7 +16548,7 @@ var render = function() {
                     _c(
                       "button",
                       {
-                        staticClass: "btn btn-primary",
+                        staticClass: "btn btn-primary add_to_table",
                         attrs: { type: "button" },
                         on: { click: _vm.add_boat }
                       },
