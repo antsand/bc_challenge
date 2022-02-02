@@ -94,3 +94,18 @@ The sass code is placed under
 				
 ## Unit Testing:
 Currently we do end to end testing using cypress
+To install cypress - npm install cypress --save-dev 
+The test script is located at: fishfry_spec.js in the root folder. Once cypress is installed fishfry_spec.js needs to be copied over to the cyress testing folder.
+This step can be implemented using CI/CD scripts.
+	
+In integration testing we test 6 cases:
+Test 1 tries to delete all records and starts from a clean slate.
+Test 2 clikcs on Add a boat and a guide, and see if it is added to the record
+Test 3 tries to add duplicate boat and check for an error
+Test 4 tries to add a duplicate guide and check for an error
+Test 5 changes the status from docked to maintenance, refreshes the page and sees if they status has been updated.
+Test 6 Opens the 'Add a boat' dialog and closes it to see if the popup functionality works. 
+![End to end integration testing](https://raw.githubusercontent.com/antsand/bc_challenge/master/public/img/test_logs.jpg)
+
+
+
