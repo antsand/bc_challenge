@@ -18,14 +18,14 @@
 			  <div class="form-group">
 			    <label for="recipient-name" class="col-form-label">Select boat to add: </label>
 				
-				<select class="form-control" v-if="boats" v-model="boat_selected">
+				<select class="form-control select_boat" v-if="boats" v-model="boat_selected">
 					<option></option>
 					<option v-for="boat_name in Object.keys(boats)" v-html="boat_name"></option>
 				</select>
 			  </div>
 			  <div class="form-group">
 			    <label for="message-text" class="col-form-label">Assign Guide</label>
-				<select class="form-control" v-if="guides" v-model="guide_selected">
+				<select class="form-control select_guide" v-if="guides" v-model="guide_selected">
 					<option></option>
 					<option v-for="guide_name in Object.keys(guides)" v-html="guide_name"></option>
 				</select>
