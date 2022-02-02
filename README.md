@@ -8,12 +8,12 @@ This application does a few things:
 4. To add or swap a guide to the boat, you need to firts delete the boat and then add the boat with the updated guide
 
 Future enhancements (not implemented):
-Ability to swap/change or remove a guide from a boat without deleting the boat
-Ability to assign multiple guides to a boat
-Ability to add/update/delete boat types and fill boat information such as boat type, last maintenance is done, cost of a boat, how old the boat is, when is the next maintenance due, etc
-Ability to add/update/delete guides and fill their profile information
-When a user clicks on the boat they can see the detailed information of boat
-When a user clicks on a guide they can see the user profile of the guide
+1. Ability to swap/change or remove a guide from a boat without deleting the boat
+2. Ability to assign multiple guides to a boat
+3. Ability to add/update/delete boat types and fill boat information such as boat type, last maintenance is done, cost of a boat, how old the boat is, when is the next maintenance due, etc
+4. Ability to add/update/delete guides and fill their profile information
+5. When a user clicks on the boat they can see the detailed information of boat
+6. When a user clicks on a guide they can see the user profile of the guide
 
 ## This repository uses:
 
