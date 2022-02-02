@@ -1,5 +1,20 @@
 # bc_challenge
 The link to the working website is at: https://bc_challenge.antsand.ca/
+
+This application does a few things:
+1. You can add a boat to the table and select a guide
+2. You can change the status of the boat (docked, inbound, outbount, maintenance) in both mobile view and desktop view
+3. You can delete a boat from the table
+4. To add or swap a guide to the boat, you need to firts delete the boat and then add the boat with the updated guide
+
+Future enhancements (not implemented):
+1. Ability to swap/change or remove a guide from a boat without deleting the boat
+2. Ability to assign multiple guides to a boat
+3. Ability to add/update/delete boat types and fill boat information such as, boat type, last maintnance done, cost of boat, how old the boat is, when is the next maintenance due, etc 
+4. Ability to add/update/delete guides and fill their profile information
+5. When a user clicks on the boat they can see the detailed information of boat
+6. When a user clicks on a guide they can see the user profile of the guide 
+
 ## This repository uses:
 
 - Phalcon PHP as the backend framework
@@ -76,3 +91,6 @@ The sass code is placed under
 - To compile the file, we need to run sass.php which will compile the \*.scss files into css.
 - The css file is generated and saved in public/css/main.css
 				
+				
+## Unit Testing:
+Currently we do end to end testing using cypress
