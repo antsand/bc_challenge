@@ -41,6 +41,18 @@ class StatusController extends ControllerBase
 		if (!$data_read) {
 			$response->setContent(json_encode("Error reading file"));
 			return $response;
+		}
+		/* Before adding, see if the boat is already added */
+		$duplicate_boat_found = $status->checkduplicateboat($data_read, $boat_selected, $guide_selected);
+		if ($duplicate_boat_found) {
+			$response->setContent(json_encode('Boat exists! Choose another boat.'));
+		        return $response;
+		}	
+		/* Before adding, see if the guide is already assigned to a boat */
+		$duplicate_guide_found = $status->checkduplicateguide($data_read, $boat_selected, $guide_selected);
+		if ($duplicate_guide_found) {
+			$response->setContent(json_encode('Guide Assigned! Choose another guide.'));
+		        return $response;
 		}	
 		/* Using the Status model to add a new boat. */
 		$status->adddata($data_read, $boat_selected, $guide_selected);

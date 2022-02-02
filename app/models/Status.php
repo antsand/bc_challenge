@@ -19,6 +19,32 @@ class Status extends Phalcon\Mvc\Model
 		return file_put_contents($this::STATUS_PATH, $data);
 	}
 
+	public function checkduplicateboat($data, $boat_selected, $guide_selected) {
+		/* Loop through the entry and see if the boat name exist */
+		if (!$data) {
+			return -1;
+		}
+		foreach($data->boats as $boats_added) {
+			if ($boats_added->name == $boat_selected) {
+				return 1;
+			}
+		} 
+		return 0;
+	}
+	
+	public function checkduplicateguide($data, $boat_selected, $guide_selected) {
+		/* Loop through the entry and see if the boat name exist */
+		if (!$data) {
+			return -1;
+		}
+		foreach($data->boats as $boats_added) {
+			if ($boats_added->guide == $guide_selected) {
+				return 1;
+			}
+		} 
+		return 0;
+	}
+
 	public function adddata($data, $boat_selected, $guide_selected) {
 		$boat_add = new StdClass();
 		/* By default, the status will be under
@@ -30,11 +56,14 @@ class Status extends Phalcon\Mvc\Model
 		array_push($data->boats, $boat_add);
 		return $data;
 	}
+	
 	public function removedata($data, $index){
 		array_splice($data->boats, intval($index), 1);
 		return $data;
 
 	}
+
+
 }
 
 ?>

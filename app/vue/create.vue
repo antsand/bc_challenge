@@ -13,7 +13,7 @@
 		      </div>
 		      <div class="modal-body">
 			<form>
-			  <div class="red danger" v-if="error" v-html="error">
+			  <div class="alert alert-danger" v-if="error" v-html="error">
 			  </div>
 			  <div class="form-group">
 			    <label for="recipient-name" class="col-form-label">Select boat to add: </label>
@@ -73,8 +73,14 @@
 			     this.$http.post('/status/create', formData)
 				.then(response => {                         
 				  console.log(response.bodyText);
-				  if (response.bodyText) {	
-					this.$emit('data', JSON.parse(response.bodyText));
+				  if (response.bodyText) {
+					var data = JSON.parse(response.bodyText);
+					/* if data is a string, then it is an error */
+					if (typeof data === 'string' || data instanceof String) {
+						this.error = data;
+						return;
+					}	
+					this.$emit('data', data);
 					this.boat_selected = null;
 					this.guide_selected = null;
 					this.close_form();  	

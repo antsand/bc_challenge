@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7125992b8d170a670832"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "36275b19f425a5a6efd2"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -13214,7 +13214,7 @@ exports = module.exports = __webpack_require__(8)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -14007,7 +14007,13 @@ function applyToTag (styleElement, obj) {
 			this.$http.post('/status/create', formData).then(response => {
 				console.log(response.bodyText);
 				if (response.bodyText) {
-					this.$emit('data', JSON.parse(response.bodyText));
+					var data = JSON.parse(response.bodyText);
+					/* if data is a string, then it is an error */
+					if (typeof data === 'string' || data instanceof String) {
+						this.error = data;
+						return;
+					}
+					this.$emit('data', data);
 					this.boat_selected = null;
 					this.guide_selected = null;
 					this.close_form();
@@ -16406,7 +16412,7 @@ var render = function() {
                     _c("form", [
                       _vm.error
                         ? _c("div", {
-                            staticClass: "red danger",
+                            staticClass: "alert alert-danger",
                             domProps: { innerHTML: _vm._s(_vm.error) }
                           })
                         : _vm._e(),
