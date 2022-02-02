@@ -100,7 +100,7 @@ The sass code is placed under
 	
 In integration testing we test 6 cases:
 
-The objective for an end-to-end integration is to test if the whole system works as described. We want to check if the elements on the website work well. Integr44ation testing will also check if the server is responding correctly. By doing integration testing, we technically test every component and active feature of the application. 
+The objective for an end-to-end integration is to test if the whole system works as described. We want to check if the elements on the website work well. Integration testing will also check if the server is responding correctly. By doing integration testing, we technically test every component and active feature of the application. 
 
 Both the API, PHP code, and Vue are tested. 
 
@@ -114,7 +114,7 @@ Both the API, PHP code, and Vue are tested.
 ![End to end integration testing](https://raw.githubusercontent.com/antsand/bc_challenge/master/public/img/test_logs.jpg)
 
 Things to be done in testing:
-Beyond integration testing, in the future it is important to add unit test for both the backend server and frontend Vue code.
+- Beyond integration testing, in the future it is important to add unit test for both the backend server and frontend Vue code.
 
 For the backend php code, test if:
 - CRUD - Create, read, update and delete works for the status controller.
